@@ -1,0 +1,1038 @@
+---
+title: "APE 03: HERRAMIENTA PARA ASISTIR AL DESARROLLO DE SOFTWARE"
+summary: "Análisis de Hermes Agent como agente autónomo de inteligencia artificial aplicado al desarrollo y apoyo en las pruebas de software."
+unit_tag: "UNIDAD 03 • APE 3"
+category: "UNIDAD 3"
+theme: "light"
+hero_style: "banner"
+duration: "Trabajo Práctico / APE"
+author_name: "Equipo de Desarrollo TechNexus"
+created_at: "Octubre 2026"
+image_url: "/img/hermes.jpg"
+---
+
+<section class="blog-reveal">
+<div id="tema-1" class="scroll-mt-28"></div>
+
+## 1. ¿QUÉ ES HERMES AGENT?
+
+**Hermes Agent** es un agente autónomo de inteligencia artificial desarrollado por **Nous Research**. Está diseñado para realizar tareas utilizando herramientas reales del entorno, en lugar de limitarse únicamente a responder preguntas mediante texto.
+
+En desarrollo de software puede interactuar con archivos, utilizar la terminal, analizar código, ejecutar comandos y coordinar diferentes acciones para completar una tarea.
+
+<div class="bg-[#7ea000]/10 border-l-4 border-[#7ea000] p-5 my-7 rounded-r-lg">
+  <p class="text-gray-700 m-0 leading-relaxed">
+    <strong>Idea clave:</strong> Hermes Agent no es simplemente un chatbot ni un asistente vinculado a un único IDE. Es un agente capaz de combinar razonamiento de IA con herramientas para actuar sobre un entorno de trabajo.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-8 not-prose">
+
+<div class="bg-white border border-gray-200 rounded-lg p-5">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">smart_toy</span>
+<p class="font-bold text-gray-900 text-sm mt-3 mb-1">Agente autónomo</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Puede organizar y ejecutar tareas compuestas por varios pasos.
+</p>
+</div>
+
+<div class="bg-white border border-gray-200 rounded-lg p-5">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">terminal</span>
+<p class="font-bold text-gray-900 text-sm mt-3 mb-1">Actúa sobre el entorno</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Puede trabajar con terminal, archivos, código y otras herramientas.
+</p>
+</div>
+
+<div class="bg-white border border-gray-200 rounded-lg p-5">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">extension</span>
+<p class="font-bold text-gray-900 text-sm mt-3 mb-1">Extensible</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Sus capacidades pueden ampliarse mediante herramientas, Skills e integraciones.
+</p>
+</div>
+
+</div>
+
+### Tabla de contenidos
+
+<div class="mt-5 mb-10">
+  <ul class="space-y-2.5 !list-none !p-0 !m-0">
+    <li><a href="#tema-1" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">01.</span>¿Qué es Hermes Agent?</a></li>
+    <li><a href="#tema-2" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">02.</span>¿Para qué sirve en desarrollo de software?</a></li>
+    <li><a href="#tema-3" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">03.</span>Hermes Agent aplicado a pruebas</a></li>
+    <li><a href="#tema-4" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">04.</span>Características principales</a></li>
+    <li><a href="#tema-5" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">05.</span>¿Cómo funciona?</a></li>
+    <li><a href="#tema-6" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">06.</span>Flujo de trabajo en pruebas</a></li>
+    <li><a href="#tema-7" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">07.</span>Tipos de pruebas que puede asistir</a></li>
+    <li><a href="#tema-8" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">08.</span>Integración y compatibilidad</a></li>
+    <li><a href="#tema-9" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">09.</span>Curva de aprendizaje</a></li>
+    <li><a href="#tema-10" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">10.</span>Licencia y costos</a></li>
+    <li><a href="#tema-11" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">11.</span>Ventajas y limitaciones</a></li>
+    <li><a href="#tema-12" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">12.</span>¿Por qué seleccionar Hermes Agent?</a></li>
+    <li><a href="#tema-13" class="text-[#7ea000] font-semibold no-underline hover:underline"><span class="text-gray-400 mr-2">13.</span>Conclusiones y referencias</a></li>
+  </ul>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-2" class="scroll-mt-28"></div>
+
+## 2. ¿PARA QUÉ SIRVE EN DESARROLLO DE SOFTWARE?
+
+Hermes Agent puede asistir en diferentes actividades del desarrollo de software. Su principal característica es que puede combinar las capacidades de un modelo de IA con herramientas que le permiten actuar sobre el proyecto.
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-7 not-prose">
+
+<div class="blog-feature-card">
+<div class="blog-feature-icon">
+<span class="material-symbols-outlined">code</span>
+</div>
+
+### Desarrollo de código
+
+Puede analizar, explicar, generar y modificar código según las necesidades del proyecto.
+
+</div>
+
+<div class="blog-feature-card">
+<div class="blog-feature-icon">
+<span class="material-symbols-outlined">bug_report</span>
+</div>
+
+### Análisis de errores
+
+Puede interpretar mensajes de error, excepciones y logs para ayudar a localizar posibles problemas.
+
+</div>
+
+<div class="blog-feature-card">
+<div class="blog-feature-icon">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+
+### Automatización
+
+Puede ejecutar comandos y coordinar varias acciones dentro de una misma tarea.
+
+</div>
+
+<div class="blog-feature-card">
+<div class="blog-feature-icon">
+<span class="material-symbols-outlined">fact_check</span>
+</div>
+
+### Pruebas de software
+
+Puede apoyar la preparación, ejecución y análisis de pruebas utilizando las herramientas instaladas en el proyecto.
+
+</div>
+
+</div>
+
+Por estas capacidades, Hermes puede utilizarse como una **herramienta de asistencia durante diferentes etapas del desarrollo**, especialmente en tareas que combinan análisis, código y automatización.
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-3" class="scroll-mt-28"></div>
+
+## 3. HERMES AGENT APLICADO A PRUEBAS DE SOFTWARE
+
+Las pruebas permiten comprobar si una aplicación funciona de acuerdo con el comportamiento esperado y ayudan a detectar defectos antes de que lleguen al usuario final.
+
+Hermes Agent puede participar en este proceso analizando el proyecto, trabajando con archivos de prueba, ejecutando comandos y revisando los resultados obtenidos.
+
+<div class="bg-[#7ea000]/10 border-l-4 border-[#7ea000] p-5 my-7 rounded-r-lg">
+<p class="text-gray-700 m-0 leading-relaxed">
+<strong>Importante:</strong> Hermes no reemplaza a frameworks especializados como <strong>Pytest, Jest, JUnit o Selenium</strong>. Su función es asistir al desarrollador y utilizar este tipo de herramientas dentro de un flujo automatizado.
+</p>
+</div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-7 not-prose">
+
+<div class="p-4 border border-gray-200 bg-white text-center rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">search</span>
+<p class="font-bold text-sm mt-2 mb-0">Analizar</p>
+</div>
+
+<div class="p-4 border border-gray-200 bg-white text-center rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">edit_document</span>
+<p class="font-bold text-sm mt-2 mb-0">Preparar</p>
+</div>
+
+<div class="p-4 border border-gray-200 bg-white text-center rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">play_arrow</span>
+<p class="font-bold text-sm mt-2 mb-0">Ejecutar</p>
+</div>
+
+<div class="p-4 border border-gray-200 bg-white text-center rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">analytics</span>
+<p class="font-bold text-sm mt-2 mb-0">Evaluar</p>
+</div>
+
+</div>
+
+De esta manera, la IA puede participar en más etapas del testing que la simple generación de casos de prueba.
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-4" class="scroll-mt-28"></div>
+
+## 4. CARACTERÍSTICAS PRINCIPALES
+
+Las principales capacidades de Hermes pueden resumirse en los siguientes elementos:
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-7 not-prose">
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">psychology</span>
+<p class="font-bold text-sm mt-2 mb-1">Autonomía</p>
+<p class="text-xs text-gray-500 m-0">
+Puede organizar tareas de varios pasos y decidir qué herramientas utilizar.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">terminal</span>
+<p class="font-bold text-sm mt-2 mb-1">Herramientas</p>
+<p class="text-xs text-gray-500 m-0">
+Interactúa con terminal, archivos y otros recursos del entorno.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">school</span>
+<p class="font-bold text-sm mt-2 mb-1">Skills</p>
+<p class="text-xs text-gray-500 m-0">
+Permiten reutilizar procedimientos especializados para tareas recurrentes.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">memory</span>
+<p class="font-bold text-sm mt-2 mb-1">Memoria</p>
+<p class="text-xs text-gray-500 m-0">
+Puede conservar contexto útil para utilizarlo posteriormente.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">account_tree</span>
+<p class="font-bold text-sm mt-2 mb-1">Subagentes</p>
+<p class="text-xs text-gray-500 m-0">
+Permite delegar partes de tareas complejas y trabajar de forma organizada.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-4 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-2xl">extension</span>
+<p class="font-bold text-sm mt-2 mb-1">Extensibilidad</p>
+<p class="text-xs text-gray-500 m-0">
+Puede ampliarse mediante herramientas, plugins, Skills y protocolos como MCP.
+</p>
+</div>
+
+</div>
+
+<div class="bg-gray-50 border border-gray-200 p-4 my-6 rounded-lg">
+<p class="text-sm text-gray-600 m-0">
+<strong>Tools vs. Skills:</strong> una herramienta permite a Hermes <strong>realizar una acción</strong>; una Skill contiene conocimiento o instrucciones sobre <strong>cómo realizar una tarea</strong>.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-5" class="scroll-mt-28"></div>
+
+## 5. ¿CÓMO FUNCIONA?
+
+Hermes recibe un objetivo, utiliza el modelo de IA para decidir qué acciones realizar y recurre a sus herramientas cuando necesita interactuar con el entorno.
+
+<div class="flex flex-wrap items-center justify-center gap-3 my-8 not-prose">
+
+<div class="px-4 py-3 border border-gray-200 bg-white rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000]">person</span>
+<p class="font-bold text-sm mt-1 mb-0">Usuario</p>
+</div>
+
+<span class="material-symbols-outlined text-[#7ea000]">arrow_forward</span>
+
+<div class="px-4 py-3 border border-gray-200 bg-white rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000]">smart_toy</span>
+<p class="font-bold text-sm mt-1 mb-0">Hermes Agent</p>
+</div>
+
+<span class="material-symbols-outlined text-[#7ea000]">arrow_forward</span>
+
+<div class="px-4 py-3 border border-gray-200 bg-white rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000]">build</span>
+<p class="font-bold text-sm mt-1 mb-0">Herramientas</p>
+</div>
+
+<span class="material-symbols-outlined text-[#7ea000]">arrow_forward</span>
+
+<div class="px-4 py-3 bg-[#7ea000] text-white rounded-lg text-center">
+<span class="material-symbols-outlined">task_alt</span>
+<p class="font-bold text-sm mt-1 mb-0">Resultado</p>
+</div>
+
+</div>
+
+El proceso no tiene que terminar después de utilizar una herramienta. Hermes puede observar el resultado, determinar si necesita otra acción y continuar trabajando.
+
+<div class="my-7 not-prose">
+  <div class="relative overflow-hidden rounded-xl bg-white border border-gray-200 shadow-sm">
+
+    {/* Encabezado */}
+    <div class="flex items-center gap-3 px-5 py-4 bg-[#7ea000]/10 border-b border-[#7ea000]/20">
+      <div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000] flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-xl">
+          autorenew
+        </span>
+      </div>
+
+      <div>
+        <p class="text-gray-900 text-base font-bold mt-0.5 mb-0">
+          Ciclo del agente
+        </p>
+      </div>
+    </div>
+
+    {/* Descripción */}
+    <div class="px-5 pt-5 pb-2">
+      <p class="text-gray-600 text-sm leading-relaxed m-0">
+        Hermes trabaja de forma iterativa. Primero comprende el objetivo, realiza una acción mediante sus herramientas, analiza el resultado obtenido y decide cuál debe ser el siguiente paso hasta completar correctamente la tarea.
+      </p>
+    </div>
+
+    {/* Ciclo */}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-5">
+
+      {/* Paso 1 */}
+      <div class="relative p-5 rounded-lg border border-gray-200 bg-gray-50 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-black text-[#7ea000]/50 tracking-tight leading-none">
+              01
+            </span>
+            <span class="material-symbols-outlined text-[#7ea000]">
+              search
+            </span>
+          </div>
+
+          <p class="font-bold text-gray-900 text-sm mb-1 mt-2">
+            Analizar
+          </p>
+
+          <p class="text-xs text-gray-500 leading-relaxed m-0">
+            Comprende el objetivo, el contexto y los recursos disponibles.
+          </p>
+        </div>
+      </div>
+
+      {/* Paso 2 */}
+      <div class="relative p-5 rounded-lg border border-gray-200 bg-gray-50 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-black text-[#7ea000]/50 tracking-tight leading-none">
+              02
+            </span>
+            <span class="material-symbols-outlined text-[#7ea000]">
+              build
+            </span>
+          </div>
+
+          <p class="font-bold text-gray-900 text-sm mb-1 mt-2">
+            Actuar
+          </p>
+
+          <p class="text-xs text-gray-500 leading-relaxed m-0">
+            Selecciona y utiliza las herramientas necesarias para avanzar.
+          </p>
+        </div>
+      </div>
+
+      {/* Paso 3 */}
+      <div class="relative p-5 rounded-lg border border-gray-200 bg-gray-50 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-black text-[#7ea000]/50 tracking-tight leading-none">
+              03
+            </span>
+            <span class="material-symbols-outlined text-[#7ea000]">
+              visibility
+            </span>
+          </div>
+
+          <p class="font-bold text-gray-900 text-sm mb-1 mt-2">
+            Observar
+          </p>
+
+          <p class="text-xs text-gray-500 leading-relaxed m-0">
+            Revisa la respuesta, salida o resultado producido por la acción.
+          </p>
+        </div>
+      </div>
+
+      {/* Paso 4 */}
+      <div class="relative p-5 rounded-lg border-2 border-[#7ea000]/40 bg-[#7ea000]/5 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xl font-black text-[#7ea000] tracking-tight leading-none">
+              04
+            </span>
+            <span class="material-symbols-outlined text-[#7ea000]">
+              account_tree
+            </span>
+          </div>
+
+          <p class="font-bold text-gray-900 text-sm mb-1 mt-2">
+            Decidir
+          </p>
+
+          <p class="text-xs text-gray-600 leading-relaxed m-0">
+            Determina si debe finalizar la tarea o iniciar una nueva acción.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Indicador de repetición */}
+    <div class="mx-5 mb-5 flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#7ea000]/10 border border-[#7ea000]/20">
+      <span class="material-symbols-outlined text-[#7ea000] text-lg">
+        replay
+      </span>
+      <p class="text-sm text-gray-700 m-0">
+        Si la tarea aún no está completa, el agente
+        <strong class="text-[#607a00]"> repite el ciclo</strong>
+        utilizando la información obtenida.
+      </p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="blog-reveal">
+<div id="tema-6" class="scroll-mt-28"></div>
+
+## 6. FLUJO DE TRABAJO EN PRUEBAS
+
+Aplicado al testing, el funcionamiento de Hermes puede resumirse en seis etapas.
+
+<div class="my-8 not-prose">
+
+<div class="hidden md:flex items-start justify-between relative">
+
+<div class="absolute top-4 left-[8%] right-[8%] h-0.5 bg-[#7ea000]/20"></div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">1</span>
+<p class="font-bold text-sm mt-3 mb-1">Analizar</p>
+<p class="text-xs text-gray-500">Proyecto</p>
+</div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">2</span>
+<p class="font-bold text-sm mt-3 mb-1">Identificar</p>
+<p class="text-xs text-gray-500">Qué probar</p>
+</div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">3</span>
+<p class="font-bold text-sm mt-3 mb-1">Preparar</p>
+<p class="text-xs text-gray-500">Pruebas</p>
+</div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">4</span>
+<p class="font-bold text-sm mt-3 mb-1">Ejecutar</p>
+<p class="text-xs text-gray-500">Herramientas</p>
+</div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">5</span>
+<p class="font-bold text-sm mt-3 mb-1">Evaluar</p>
+<p class="text-xs text-gray-500">Resultados</p>
+</div>
+
+<div class="relative flex flex-col items-center text-center w-1/6">
+<span class="z-10 w-8 h-8 rounded-full bg-[#7ea000] text-white flex items-center justify-center font-bold text-xs">6</span>
+<p class="font-bold text-sm mt-3 mb-1">Verificar</p>
+<p class="text-xs text-gray-500">Correcciones</p>
+</div>
+
+</div>
+
+<div class="md:hidden space-y-2">
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">1</span>
+<span class="text-sm"><strong>Analizar:</strong> comprender el proyecto.</span>
+</div>
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">2</span>
+<span class="text-sm"><strong>Identificar:</strong> determinar qué debe probarse.</span>
+</div>
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">3</span>
+<span class="text-sm"><strong>Preparar:</strong> crear o modificar las pruebas.</span>
+</div>
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">4</span>
+<span class="text-sm"><strong>Ejecutar:</strong> utilizar el framework correspondiente.</span>
+</div>
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">5</span>
+<span class="text-sm"><strong>Evaluar:</strong> interpretar resultados y errores.</span>
+</div>
+
+<div class="flex items-center gap-3 p-3 border border-gray-200 bg-white">
+<span class="w-7 h-7 rounded-full bg-[#7ea000] text-white flex items-center justify-center text-xs font-bold">6</span>
+<span class="text-sm"><strong>Verificar:</strong> volver a ejecutar después de los cambios.</span>
+</div>
+
+</div>
+
+</div>
+
+Este ciclo puede repetirse hasta que las pruebas alcancen el resultado esperado.
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-7" class="scroll-mt-28"></div>
+
+## 7. TIPOS DE PRUEBAS QUE PUEDE ASISTIR
+
+Hermes puede trabajar junto con las herramientas de testing disponibles en el proyecto.
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-7 not-prose">
+
+<div class="p-5 bg-white border border-gray-200 rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">functions</span>
+<p class="font-bold text-sm mt-2 mb-1">Unitarias</p>
+<p class="text-xs text-gray-500 m-0">Funciones y componentes individuales.</p>
+</div>
+
+<div class="p-5 bg-white border border-gray-200 rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">hub</span>
+<p class="font-bold text-sm mt-2 mb-1">Integración</p>
+<p class="text-xs text-gray-500 m-0">Interacción entre componentes.</p>
+</div>
+
+<div class="p-5 bg-white border border-gray-200 rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">api</span>
+<p class="font-bold text-sm mt-2 mb-1">API</p>
+<p class="text-xs text-gray-500 m-0">Solicitudes, respuestas y servicios.</p>
+</div>
+
+<div class="p-5 bg-white border border-gray-200 rounded-lg text-center">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">replay</span>
+<p class="font-bold text-sm mt-2 mb-1">Regresión</p>
+<p class="text-xs text-gray-500 m-0">Verificación después de cambios.</p>
+</div>
+
+</div>
+
+También puede colaborar en tareas complementarias como **análisis de logs, interpretación de excepciones, generación de datos de prueba y revisión de resultados**.
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-8" class="scroll-mt-28"></div>
+
+## 8. INTEGRACIÓN Y COMPATIBILIDAD
+
+Hermes no está diseñado para depender de un único entorno. Puede utilizarse en diferentes plataformas, integrarse con distintas herramientas y trabajar con proveedores de modelos tanto locales como alojados en la nube.
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-7 not-prose">
+
+<div class="border border-gray-200 bg-white p-5 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">devices</span>
+<p class="font-bold text-sm mt-3 mb-2">Plataformas</p>
+<p class="text-sm text-gray-500 m-0">
+Puede ejecutarse en Linux, macOS y Windows. En Windows también puede utilizarse mediante WSL2 para disponer de un entorno Linux integrado.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-5 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">model_training</span>
+<p class="font-bold text-sm mt-3 mb-2">Modelos de IA</p>
+<p class="text-sm text-gray-500 m-0">
+El modelo que utiliza Hermes puede cambiarse según el costo, velocidad, capacidad de razonamiento o privacidad requerida.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-5 rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">hub</span>
+<p class="font-bold text-sm mt-3 mb-2">Integraciones</p>
+<p class="text-sm text-gray-500 m-0">
+Puede ampliar sus capacidades mediante MCP, herramientas externas, proveedores de IA y diferentes interfaces de interacción.
+</p>
+</div>
+
+</div>
+
+### Entornos de uso
+
+Hermes puede utilizarse desde diferentes interfaces dependiendo del tipo de trabajo que se quiera realizar. El agente sigue siendo el mismo, pero cambia la forma en la que el desarrollador interactúa con él.
+
+<div class="space-y-3 my-7 not-prose">
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">terminal</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">CLI — Interfaz de línea de comandos</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Permite conversar y trabajar con Hermes directamente desde una consola. Es especialmente útil para desarrolladores porque facilita combinar las instrucciones del agente con comandos, scripts y herramientas del proyecto.
+</p>
+</div>
+</div>
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">code_blocks</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">Terminal</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Hermes puede ejecutar herramientas disponibles en el sistema, como gestores de paquetes, compiladores, comandos Git o frameworks de testing. Esto resulta importante para automatizar tareas de desarrollo y pruebas.
+</p>
+</div>
+</div>
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">desktop_windows</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">Aplicación de escritorio</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Proporciona una forma gráfica de interactuar con el agente para quienes prefieren trabajar mediante una interfaz visual en lugar de depender únicamente de comandos.
+</p>
+</div>
+</div>
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">integration_instructions</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">IDE / ACP</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Mediante integraciones compatibles, Hermes puede utilizarse desde entornos de desarrollo para acercar las capacidades del agente al lugar donde el programador escribe, revisa y prueba el código.
+</p>
+</div>
+</div>
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">extension</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">MCP — Model Context Protocol</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Permite conectar al agente con herramientas y servicios adicionales. De esta manera Hermes puede incorporar nuevas capacidades sin que todas tengan que formar parte originalmente del agente.
+</p>
+</div>
+</div>
+
+<div class="flex items-start gap-4 p-4 bg-white border border-gray-200 rounded-lg">
+<div class="w-10 h-10 shrink-0 rounded-lg bg-[#7ea000]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7ea000]">dns</span>
+</div>
+<div>
+<p class="font-bold text-gray-900 text-sm mb-1">Servidor remoto</p>
+<p class="text-gray-500 text-sm leading-relaxed m-0">
+Hermes también puede ejecutarse en otra máquina o servidor. Esto permite utilizar infraestructura con mayor capacidad, mantener procesos disponibles de forma remota o separar el entorno del agente del computador principal.
+</p>
+</div>
+</div>
+
+</div>
+
+### Modelos de IA compatibles
+
+Hermes separa el **agente** del **modelo de inteligencia artificial**. Esto significa que no obliga al usuario a utilizar un solo modelo: puede conectarse con distintos proveedores o incluso ejecutar modelos en infraestructura propia.
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-7 not-prose">
+
+<div class="border border-gray-200 bg-white overflow-hidden rounded-lg">
+
+<div class="px-5 py-4 bg-[#7ea000]/10 border-b border-gray-200">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#7ea000]">money_off</span>
+<div>
+<p class="font-bold text-gray-900 m-0">Opciones gratuitas</p>
+<p class="text-xs text-gray-500 mt-1 mb-0">Sin costo directo de API</p>
+</div>
+</div>
+</div>
+
+<div class="divide-y divide-gray-100">
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Modelos locales</p>
+<p class="text-xs text-gray-500 m-0">
+Hermes puede conectarse a modelos ejecutados localmente mediante herramientas como Ollama, vLLM, llama.cpp, SGLang o LocalAI. No generan costo por consumo de API, aunque utilizan los recursos del computador.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Qwen local</p>
+<p class="text-xs text-gray-500 m-0">
+La documentación utiliza modelos Qwen como ejemplo de ejecución mediante un endpoint local compatible con Hermes.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Modelos gratuitos de OpenRouter</p>
+<p class="text-xs text-gray-500 m-0">
+OpenRouter puede ofrecer modelos identificados como gratuitos. Su disponibilidad puede cambiar y depende del catálogo vigente del proveedor.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="border border-gray-200 bg-white overflow-hidden rounded-lg">
+
+<div class="px-5 py-4 bg-gray-50 border-b border-gray-200">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#7ea000]">payments</span>
+<div>
+<p class="font-bold text-gray-900 m-0">Opciones de pago</p>
+<p class="text-xs text-gray-500 mt-1 mb-0">API, créditos o suscripción</p>
+</div>
+</div>
+</div>
+
+<div class="divide-y divide-gray-100">
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">OpenAI / Codex</p>
+<p class="text-xs text-gray-500 m-0">
+Puede utilizar modelos de OpenAI compatibles mediante los métodos de autenticación admitidos por Hermes.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Anthropic Claude</p>
+<p class="text-xs text-gray-500 m-0">
+Hermes puede trabajar con modelos Claude mediante API, autenticación compatible o proveedores que los ofrezcan.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Google Gemini</p>
+<p class="text-xs text-gray-500 m-0">
+Los modelos Gemini pueden utilizarse mediante proveedores compatibles configurados en Hermes.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">Nous Portal</p>
+<p class="text-xs text-gray-500 m-0">
+Servicio de Nous Research que reúne un amplio catálogo de modelos bajo una suscripción y permite cambiar de modelo desde Hermes.
+</p>
+</div>
+
+<div class="p-4">
+<p class="font-bold text-sm text-gray-900 mb-1">OpenRouter</p>
+<p class="text-xs text-gray-500 m-0">
+Permite acceder desde una sola cuenta a numerosos modelos de diferentes proveedores y elegirlos según precio, velocidad o capacidad.
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="bg-[#7ea000]/10 border-l-4 border-[#7ea000] p-5 my-7 rounded-r-lg">
+<p class="text-gray-700 text-sm leading-relaxed m-0">
+<strong>¿Cuál elegir?</strong> Para aprendizaje o experimentación se puede comenzar con un modelo local o una opción gratuita disponible. Para proyectos que requieran mayor capacidad de razonamiento, programación o contexto, se pueden utilizar modelos comerciales mediante API o suscripción.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-9" class="scroll-mt-28"></div>
+
+## 9. CURVA DE APRENDIZAJE
+
+La dificultad de Hermes depende del nivel de profundidad con el que se quiera utilizar.
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8 not-prose">
+
+<div class="border-t-4 border-[#7ea000]/40 bg-white border-x border-b border-gray-200 p-5">
+<span class="text-xs font-bold uppercase tracking-wider text-[#7ea000]">Nivel 1</span>
+<p class="font-bold text-gray-900 mt-2 mb-2">Básico</p>
+<p class="text-sm text-gray-500 m-0">
+Instalación, configuración inicial y ejecución de tareas sencillas.
+</p>
+</div>
+
+<div class="border-t-4 border-[#7ea000]/70 bg-white border-x border-b border-gray-200 p-5">
+<span class="text-xs font-bold uppercase tracking-wider text-[#7ea000]">Nivel 2</span>
+<p class="font-bold text-gray-900 mt-2 mb-2">Intermedio</p>
+<p class="text-sm text-gray-500 m-0">
+Uso de terminal, herramientas, archivos y Skills.
+</p>
+</div>
+
+<div class="border-t-4 border-[#7ea000] bg-white border-x border-b border-gray-200 p-5">
+<span class="text-xs font-bold uppercase tracking-wider text-[#7ea000]">Nivel 3</span>
+<p class="font-bold text-gray-900 mt-2 mb-2">Avanzado</p>
+<p class="text-sm text-gray-500 m-0">
+MCP, subagentes, automatización y configuraciones personalizadas.
+</p>
+</div>
+
+</div>
+
+<div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
+<p class="text-sm text-gray-600 m-0">
+<strong>Valoración:</strong> comenzar a utilizar Hermes es relativamente accesible, pero aprovechar todas sus capacidades requiere conocimientos de desarrollo, terminal y configuración de herramientas de IA.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-10" class="scroll-mt-28"></div>
+
+## 10. LICENCIA Y COSTOS
+
+Hermes Agent es un proyecto **open source** distribuido bajo **licencia MIT**.
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-7 not-prose">
+
+<div class="border border-gray-200 bg-white p-5 rounded-lg">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">license</span>
+<p class="font-bold text-gray-900 m-0">Licencia MIT</p>
+</div>
+<p class="text-sm text-gray-500 m-0">
+Permite utilizar, modificar y distribuir el software respetando las condiciones de la licencia.
+</p>
+</div>
+
+<div class="border border-gray-200 bg-white p-5 rounded-lg">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">payments</span>
+<p class="font-bold text-gray-900 m-0">Costos externos</p>
+</div>
+<p class="text-sm text-gray-500 m-0">
+El uso de modelos mediante API, servidores u otros servicios externos puede generar costos adicionales.
+</p>
+</div>
+
+</div>
+
+<div class="bg-[#7ea000]/10 border-l-4 border-[#7ea000] p-4 my-6 rounded-r-lg">
+<p class="text-gray-700 text-sm m-0">
+<strong>En resumen:</strong> Hermes Agent puede utilizarse como software de código abierto; el costo real depende principalmente del modelo de IA y de la infraestructura que se decida utilizar.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-11" class="scroll-mt-28"></div>
+
+## 11. VENTAJAS Y LIMITACIONES
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-7 not-prose">
+
+<div class="border border-gray-200 bg-white overflow-hidden">
+
+<div class="px-5 py-4 border-b border-gray-200 bg-[#7ea000]/5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#7ea000]">thumb_up</span>
+<p class="font-bold text-gray-900 m-0">Ventajas</p>
+</div>
+</div>
+
+<div class="divide-y divide-gray-100">
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Autonomía:</strong> realiza tareas de varios pasos.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Automatización:</strong> puede ejecutar herramientas y comandos.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Flexibilidad:</strong> admite diferentes modelos e integraciones.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Extensibilidad:</strong> puede incorporar nuevas capacidades.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Código abierto:</strong> puede estudiarse y adaptarse.
+</div>
+
+</div>
+</div>
+
+
+<div class="border border-gray-200 bg-white overflow-hidden">
+
+<div class="px-5 py-4 border-b border-gray-200 bg-gray-50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-500">warning</span>
+<p class="font-bold text-gray-900 m-0">Limitaciones</p>
+</div>
+</div>
+
+<div class="divide-y divide-gray-100">
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>No reemplaza herramientas especializadas:</strong> necesita frameworks de testing para determinadas pruebas.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Depende del modelo:</strong> la calidad puede variar según la IA utilizada.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Requiere supervisión:</strong> sus resultados y cambios deben revisarse.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Configuración:</strong> las funciones avanzadas requieren mayor conocimiento técnico.
+</div>
+
+<div class="p-3.5 text-sm text-gray-600">
+<strong>Costos externos:</strong> algunas APIs e infraestructuras pueden ser de pago.
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="bg-amber-50 border-l-4 border-amber-400 p-4 my-6">
+<p class="text-sm text-gray-700 m-0">
+<strong>Seguridad:</strong> al poder ejecutar comandos y modificar archivos, es recomendable controlar permisos, proteger credenciales y revisar las acciones importantes antes de aplicarlas en entornos de producción.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-12" class="scroll-mt-28"></div>
+
+## 12. ¿POR QUÉ SELECCIONAR HERMES AGENT?
+
+Hermes Agent resulta especialmente interesante para el desarrollo de software porque su enfoque va más allá de generar respuestas o sugerencias de código.
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-7 not-prose">
+
+<div class="text-center p-5 border border-gray-200 bg-white rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">psychology</span>
+<p class="font-bold text-sm mt-2 mb-1">Razona</p>
+<p class="text-xs text-gray-500 m-0">Analiza la tarea y decide cómo abordarla.</p>
+</div>
+
+<div class="text-center p-5 border border-gray-200 bg-white rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">build</span>
+<p class="font-bold text-sm mt-2 mb-1">Actúa</p>
+<p class="text-xs text-gray-500 m-0">Utiliza herramientas sobre el entorno.</p>
+</div>
+
+<div class="text-center p-5 border border-gray-200 bg-white rounded-lg">
+<span class="material-symbols-outlined text-[#7ea000] text-3xl">autorenew</span>
+<p class="font-bold text-sm mt-2 mb-1">Verifica</p>
+<p class="text-xs text-gray-500 m-0">Observa resultados y continúa cuando es necesario.</p>
+</div>
+
+</div>
+
+### Ventajas frente a otras opciones
+
+Frente a asistentes centrados principalmente en generar o completar código, Hermes destaca por su capacidad de **combinar razonamiento con acciones ejecutadas mediante herramientas**.
+
+En las pruebas de software esto permite trabajar con un flujo más amplio:
+
+<div class="flex flex-wrap items-center justify-center gap-2 my-7 not-prose">
+
+<span class="px-3 py-2 bg-gray-50 border border-gray-200 text-sm font-semibold">Analizar</span>
+<span class="material-symbols-outlined text-[#7ea000] text-lg">arrow_forward</span>
+<span class="px-3 py-2 bg-gray-50 border border-gray-200 text-sm font-semibold">Preparar</span>
+<span class="material-symbols-outlined text-[#7ea000] text-lg">arrow_forward</span>
+<span class="px-3 py-2 bg-gray-50 border border-gray-200 text-sm font-semibold">Ejecutar</span>
+<span class="material-symbols-outlined text-[#7ea000] text-lg">arrow_forward</span>
+<span class="px-3 py-2 bg-gray-50 border border-gray-200 text-sm font-semibold">Evaluar</span>
+<span class="material-symbols-outlined text-[#7ea000] text-lg">arrow_forward</span>
+<span class="px-3 py-2 bg-[#7ea000] text-white text-sm font-semibold">Verificar</span>
+
+</div>
+
+<div class="bg-[#7ea000]/10 border-l-4 border-[#7ea000] p-5 my-7 rounded-r-lg">
+<p class="text-gray-700 m-0 leading-relaxed">
+<strong>Justificación de selección:</strong> Hermes Agent fue seleccionado porque representa un enfoque moderno de asistencia al desarrollo, donde la inteligencia artificial no solo genera contenido, sino que puede utilizar herramientas y participar en actividades de análisis, automatización y pruebas.
+</p>
+</div>
+
+</section>
+
+
+<section class="blog-reveal">
+<div id="tema-13" class="scroll-mt-28"></div>
+
+## 13. CONCLUSIONES
+
+Hermes Agent representa una evolución de los asistentes tradicionales hacia un modelo de **agente autónomo**, capaz de combinar inteligencia artificial con herramientas reales del entorno de desarrollo.
+
+En pruebas de software su valor no consiste en reemplazar frameworks como Jest, Pytest, JUnit o Selenium, sino en **asistir y automatizar tareas alrededor de ellos**: analizar el proyecto, preparar pruebas, ejecutarlas, interpretar resultados y apoyar la verificación de correcciones.
+
+Su flexibilidad, naturaleza de código abierto y capacidad de integración lo convierten en una alternativa interesante para explorar nuevas formas de asistencia inteligente en ingeniería de software. Sin embargo, las acciones y resultados generados por el agente deben mantenerse bajo supervisión del desarrollador.
+
+### Referencias
+
+**Nous Research.** (2026). *Hermes Agent Documentation*. Documentación oficial de Hermes Agent.  
+https://hermes-agent.nousresearch.com/docs/
+
+**Nous Research.** (2026). *Hermes Agent*. Repositorio oficial del proyecto. GitHub.  
+https://github.com/NousResearch/hermes-agent
+
+**Nous Research.** (2026). *Hermes Agent — Installation*. Documentación oficial de instalación.  
+https://hermes-agent.nousresearch.com/docs/getting-started/installation
+
+**Nous Research.** (2026). *Hermes Agent — LLM and Model Providers*. Documentación de proveedores y modelos compatibles.
+
+**Nous Research.** (2026). *Hermes Agent — Local Models*. Documentación para la ejecución mediante Ollama, vLLM y otros endpoints locales.
+
+**Nous Research.** (2026). *Hermes Agent — Tools and Toolsets*. Documentación sobre herramientas y conjuntos de herramientas.
+
+**Nous Research.** (2026). *Hermes Agent — Skills*. Documentación sobre habilidades reutilizables del agente.
+
+</section>
